@@ -1,0 +1,14 @@
+/* NAV STYLES */
+
+nav .navbar-brand img {
+    height: 75px;
+    width: auto;
+}
+
+nav .navbar-toggler {
+    border: 0 !important;
+}
+
+.collapse .navbar-nav .active {
+    border-bottom: #feaf43 2px solid;
+}

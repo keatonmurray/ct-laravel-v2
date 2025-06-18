@@ -1,9 +1,33 @@
+@import './custom.css';
+
 /* GLOBAL STYLES */
 
 :root {
     --primary-font: Poppins, sans-serif;
+    --primary-bg: #feaf43;
+    --secondary-bg: #40403f;
 }
 
 body {
     font-family: var(--primary-font);
+}
+
+.btn-primary {
+    background-color: var(--primary-bg);
+    border: 0;
+    border-radius: 0;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-bg);
+    border: 0;
+    border-radius: 0;
+}
+
+.btn-primary:hover {
+    background-color: #e9941c;
+}
+
+.btn-secondary:hover {
+    background-color: #2e2e2e;
 }
