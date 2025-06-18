@@ -51,21 +51,17 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th class="fw-500 text-nowrap" style="min-width: 150px;">Product Name</th>
-                                    <th class="fw-500 text-nowrap" style="min-width: 180px;">Quantity In Stock</th>
-                                    <th class="fw-500 text-nowrap" style="min-width: 160px;">Price Per Item</th>
-                                    <th class="fw-500 text-nowrap" style="min-width: 160px;">Submitted On</th>
-                                    <th class="fw-500 text-nowrap" style="min-width: 140px;">Item Total</th>
+                                    <th class="fw-500 text-nowrap">Product Name</th>
+                                    <th class="fw-500 text-nowrap">Quantity In Stock</th>
+                                    <th class="fw-500 text-nowrap">Price Per Item</th>
+                                    <th class="fw-500 text-nowrap">Submitted On</th>
+                                    <th class="fw-500 text-nowrap">Item Total</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td class="text-nowrap">T-Shirt</td>
-                                    <td class="text-nowrap">10</td>
-                                    <td class="text-nowrap">$50</td>
-                                    <td class="text-nowrap">Dec-23-2023</td>
-                                    <td class="text-nowrap">$500</td>
-                                </tr>
+                                 @foreach($products as $product)
+                                    @include('partials.product-row', ['product' => $product])
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

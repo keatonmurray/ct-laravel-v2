@@ -12,23 +12,51 @@ class ProductController extends Controller
     }
 
     public function create()
-    {
-        return view('pages.create');
+    {   
+        $products = $this->productData();
+        return view('pages.create', ['products' => $products]);
     }
 
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'product_name'     => 'required|string|max:255',
-            'qty_in_stock'     => 'required|integer|min:0',
-            'price_per_item'   => 'required|numeric|min:0',
+            'product_name'   => 'required|string|max:255',
+            'qty_in_stock'   => 'required|integer|min:0',
+            'price_per_item' => 'required|numeric|min:0',
         ]);
 
+        $validated['created_at'] = now()->format('F d, Y');
+
+        $products = session()->get('products', []);
+
+        $products[] = $validated;
+
+        session(['products' => $products]);
+
         return response()->json([
-            'status' => 'success',
-            'message' => 'Product data received successfully!',
-            'data' => $validated
+            'status'  => 'success',
+            'message' => 'Product saved successfully!',
+            'data'    => $validated
         ]);
     }
 
+    public function fetch()
+    {
+        return response()->json($this->productData());
+    }
+
+    // Central method to get all saved products from session for Blade and AJAX
+    private function productData()
+    {
+        return session()->get('products', []);
+    }
+   
+    // Renders the product rows partial using session data and returns the HTML as a JSON response for AJAX
+    public function fetchBlade()
+    {
+        $products = $this->productData();
+        $html = view('partials.product-row', compact('products'))->render();
+
+        return response()->json(['html' => $html]);
+    }
 }
