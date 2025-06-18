@@ -48,22 +48,26 @@
                     <hr />
 
                     <div class="table-responsive mt-4">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th class="fw-500 text-nowrap">Product Name</th>
-                                    <th class="fw-500 text-nowrap">Quantity In Stock</th>
-                                    <th class="fw-500 text-nowrap">Price Per Item</th>
-                                    <th class="fw-500 text-nowrap">Submitted On</th>
-                                    <th class="fw-500 text-nowrap">Item Total</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                 @foreach($products as $product)
-                                    @include('partials.product-row', ['product' => $product])
-                                @endforeach
-                            </tbody>
-                        </table>
+                        @if($products)
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="fw-500 text-nowrap">Product Name</th>
+                                        <th class="fw-500 text-nowrap">Quantity In Stock</th>
+                                        <th class="fw-500 text-nowrap">Price Per Item</th>
+                                        <th class="fw-500 text-nowrap">Submitted On</th>
+                                        <th class="fw-500 text-nowrap">Item Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($products as $product)
+                                        @include('partials.product-row', ['product' => $product])
+                                    @endforeach
+                                </tbody>
+                            </table>
+                            @else 
+                            <p class="text-center text-muted">No products added yet</p>
+                        @endif
                     </div>
                 </div>
             </div>

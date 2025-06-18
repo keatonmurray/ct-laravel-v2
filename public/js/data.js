@@ -36,9 +36,11 @@ $(document).ready(function () {
             },
             error: function (xhr) {
                 console.error('Error:', xhr.responseJSON);
-                alert('There was an error saving the data.');
+                toastr.options = {
+                    "positionClass": "toast-top-center"
+                };
+                toastr.error('here was an error saving the data.');
             }
         });
     });
-
 });

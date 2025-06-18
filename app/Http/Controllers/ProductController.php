@@ -46,18 +46,29 @@ class ProductController extends Controller
         return response()->json($this->productData());
     }
 
-    // Central method to get all saved products from session for Blade and AJAX
+    // Central method to get all saved products from session 
     private function productData()
     {
         return session()->get('products', []);
     }
    
     // Renders the product rows partial using session data and returns the HTML as a JSON response for AJAX
+    // PS: I personally don't like hardcoding HTML's in an AJAX syntax, so I decided to use Blade partials so Blade handles the looping, and view rendering
     public function fetchBlade()
     {
         $products = $this->productData();
         $html = view('partials.product-row', compact('products'))->render();
 
         return response()->json(['html' => $html]);
+    }
+
+    public function edit()
+    {
+
+    }
+
+    public function delete()
+    {
+        
     }
 }
