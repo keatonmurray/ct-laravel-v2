@@ -1,7 +1,11 @@
 /* NAV STYLES */
 
+header {
+    background-color: #fff !important;
+}
+
 nav .navbar-brand img {
-    height: 75px;
+    height: 80px;
     width: auto;
 }
 
@@ -10,5 +14,55 @@ nav .navbar-toggler {
 }
 
 .collapse .navbar-nav .active {
-    border-bottom: #feaf43 2px solid;
+    border-bottom: var(--primary-bg) 2px solid;
+}
+
+/* Home */
+
+.home .img-bg-container {
+    position: relative;
+    border: #f4e7b0 1rem solid;
+    height: 70vw;
+    max-height: 500px;
+    width: 60vw;
+    max-width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    z-index: 1;
+}
+.shoe-frame {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: auto;
+}
+
+.border-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 10px solid #f4e7b0;
+    z-index: 1;
+}
+
+.shoe-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 190%; 
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    object-fit: contain;
+}
+
+.trendy-text {
+  font-family: var(--secondary-font);
+  font-weight: 700; 
+  font-size: 6rem;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
 }

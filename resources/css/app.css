@@ -1,33 +1,44 @@
 @import './custom.css';
+@import './media.css';
 
 /* GLOBAL STYLES */
 
 :root {
-    --primary-font: Poppins, sans-serif;
-    --primary-bg: #feaf43;
-    --secondary-bg: #40403f;
+    --primary-font: "Open Sans", sans-serif;
+    --secondary-font: 'Playfair Display', serif;
+    --primary-bg: #f4e7b0;
+    --secondary-bg: #000;
 }
 
 body {
     font-family: var(--primary-font);
+    overflow-x:hidden;
 }
 
 .btn-primary {
     background-color: var(--primary-bg);
     border: 0;
-    border-radius: 0;
+    border-radius: 2.5rem;
 }
 
 .btn-secondary {
     background-color: var(--secondary-bg);
     border: 0;
-    border-radius: 0;
+    border-radius: 2.5rem;
 }
 
 .btn-primary:hover {
-    background-color: #e9941c;
+    background-color: #ffd52e;
 }
 
 .btn-secondary:hover {
     background-color: #2e2e2e;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
 }
