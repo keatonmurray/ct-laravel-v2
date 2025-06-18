@@ -31,6 +31,7 @@ class ProductController extends Controller
 
         $products[] = $validated;
 
+        // Save data in a session
         session(['products' => $products]);
 
         return response()->json([

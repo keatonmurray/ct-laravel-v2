@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    // Logic for fetching product data stored in the session
     function fetchProducts() {
         $.ajax({
             url: '/products/fetch-blade',
@@ -15,6 +16,7 @@ $(document).ready(function () {
 
     fetchProducts();
 
+    // Logic for saving product data into the session
     $('#productForm').on('submit', function (e) {
         e.preventDefault();
 
