@@ -15,8 +15,14 @@
             </ul>
 
             <div class="actions d-flex gap-2">
-                <button class="btn btn-secondary">Login</button>
-                <button class="btn btn-secondary">Signup</button>
+                <button class="btn btn-secondary fw-bold">
+                    <i class="fa-solid fa-right-to-bracket me-1"></i>
+                    Login
+                </button>
+                <button class="btn btn-secondary fw-bold">
+                   <i class="fa-solid fa-user-plus me-1"></i>
+                    Signup
+                </button>
             </div>
         </div>
     </div>

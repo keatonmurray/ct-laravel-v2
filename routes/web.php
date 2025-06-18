@@ -5,3 +5,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ProductController::class, 'index'])->name('home');
 Route::get('/your-inventory', [ProductController::class, 'create'])->name('create');
+Route::post('/save-product', [ProductController::class, 'store'])->name('store');
