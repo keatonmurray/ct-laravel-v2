@@ -1,8 +1,8 @@
 @extends('layout')
 
 @section('content')
-    <div class="login row g-0 min-vh-100">
-        <div class="col-12 col-md-6 d-flex align-items-md-start align-items-center justify-content-center p-4">
+    <div class="login row g-0">
+        <div class="col-12 col-md-6 d-md-flex d-none align-items-md-start align-items-center justify-content-center p-4">
             <figure class="w-100 text-center">
                 <img src="{{ asset('img/register-bg.png') }}" alt="Background Image" class="img-fluid" style="max-height: 450px;">
             </figure>

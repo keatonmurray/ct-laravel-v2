@@ -8,13 +8,17 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto gap-3">
-                <li class="nav-item fw-600"><a href="/" class="nav-link text-dark">Home</a></li>
-                <li class="nav-item fw-600"><a href="/your-inventory" class="nav-link text-dark">Your Inventory</a></li>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav mx-auto gap-3 text-center">
+                <li class="nav-item fw-600">
+                    <a href="/" class="nav-link text-dark">Home</a>
+                </li>
+                <li class="nav-item fw-600">
+                    <a href="/your-inventory" class="nav-link text-dark">Your Inventory</a>
+                </li>
             </ul>
 
-            <div class="actions d-flex gap-2">
+            <div class="actions d-flex gap-2 justify-content-center flex-wrap mt-3 mt-md-0">
                 @if (session()->has('logged_in_user'))
                     <form action="{{ route('auth.logout') }}" method="POST">
                         @csrf
@@ -24,7 +28,7 @@
                         </button>
                     </form>
                 @else
-                    <a href="{{route('auth.loginView')}}" class="btn btn-primary fw-bold" role="button">
+                    <a href="{{ route('auth.loginView') }}" class="btn btn-primary fw-bold" role="button">
                         <i class="fa-solid fa-right-to-bracket me-1"></i>
                         Login
                     </a>
@@ -35,5 +39,6 @@
                 @endif
             </div>
         </div>
+
     </div>
 </nav>
