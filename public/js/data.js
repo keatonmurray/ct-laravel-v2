@@ -16,6 +16,11 @@ $(document).ready(function () {
 
     fetchProducts();
 
+     // Refresh Product List
+    $('#refreshBtn').on('click', function () {
+        location.reload();
+    });
+
     // Logic for saving product data into the session
     $('#productForm').on('submit', function (e) {
         e.preventDefault();
@@ -40,6 +45,27 @@ $(document).ready(function () {
                     "positionClass": "toast-top-center"
                 };
                 toastr.error('Please fill out all fields.');
+            }
+        });
+    });
+
+    // Logic for deleting specified resource
+    $(document).on('click', '#delete-product', function () {
+        const id = $(this).data('id');
+
+        $.ajax({
+            url: '/destroy',
+            method: 'DELETE',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            data: { id }, 
+            success: function (response) {
+                toastr.success(response.message);
+                fetchProducts(); 
+            },
+            error: function () {
+                toastr.error('Failed to delete product');
             }
         });
     });

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ProductController extends Controller
 {
@@ -25,6 +26,7 @@ class ProductController extends Controller
             'price_per_item' => ['required', 'numeric', 'regex:/^\d+(\.\d{1,2})?$/'],        
         ]);
 
+        $validated['id'] = Str::uuid();
         $validated['created_at'] = now()->format('F d, Y');
 
         $products = session()->get('products', []);
@@ -67,8 +69,14 @@ class ProductController extends Controller
 
     }
 
-    public function delete()
+    public function destroy(Request $request)
     {
-        
+        $id = $request->input('id'); 
+        $products = session()->get('products', []);
+        $filtered = array_filter($products, fn($product) => (string) $product['id'] != $id);
+        session(['products' => array_values($filtered)]); 
+
+        return response()->json(['status' => 'success', 'message' => 'Product deleted successfully']);
     }
+
 }

@@ -1,4 +1,4 @@
-<tr>
+<tr data-id={{ $product['id'] ?? '' }}>
     <td class="align-middle">{{ $product['product_name'] ?? '' }}</td>
     <td class="align-middle">{{ $product['qty_in_stock'] ?? '' }}</td>
     <td class="align-middle">${{ $product['price_per_item'] ?? '' }}</td>
@@ -8,11 +8,14 @@
     }}</td>
     <td class="text-nowrap align-middle">
         <div class="d-flex gap-1">
-            <button class="btn btn-secondary fw-bold btn-sm d-inline-flex align-items-center">
+            <button class="btn btn-primary fw-bold btn-sm d-inline-flex align-items-center">
                 <i class="fa-solid fa-pen-to-square me-1"></i> 
                 Edit
             </button>
-            <button class="btn btn-secondary fw-bold btn-sm d-inline-flex align-items-center">
+            <button 
+                class="btn btn-primary fw-bold btn-sm d-inline-flex align-items-center" id="delete-product"
+                data-id={{ $product['id'] ?? '' }}
+            >
                 <i class="fa-solid fa-trash me-1"></i> 
                 Delete
             </button>

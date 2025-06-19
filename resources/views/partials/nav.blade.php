@@ -18,17 +18,17 @@
                 @if (session()->has('logged_in_user'))
                     <form action="{{ route('auth.logout') }}" method="POST">
                         @csrf
-                        <button type="submit" class="btn btn-secondary fw-bold">
+                        <button type="submit" class="btn btn-primary fw-bold">
                             <i class="fa-solid fa-right-from-bracket me-1"></i>
                             Logout
                         </button>
                     </form>
                 @else
-                    <a href="{{route('auth.loginView')}}" class="btn btn-secondary fw-bold" role="button">
+                    <a href="{{route('auth.loginView')}}" class="btn btn-primary fw-bold" role="button">
                         <i class="fa-solid fa-right-to-bracket me-1"></i>
                         Login
                     </a>
-                    <a href="/register" class="btn btn-secondary fw-bold" role="button">
+                    <a href="/register" class="btn btn-primary fw-bold" role="button">
                         <i class="fa-solid fa-user-plus me-1"></i>
                         Signup
                     </a>

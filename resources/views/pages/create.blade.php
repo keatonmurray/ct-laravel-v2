@@ -27,7 +27,7 @@
                             <label for="price_per_item" class="form-label">Price Per Item</label>
                             <input type="number" name="price_per_item" class="form-control text-muted small" id="price_per_item" step="0.01" min="0">
                         </div>
-                        <button type="submit" class="btn btn-secondary float-end fw-bold">
+                        <button type="submit" class="btn btn-primary float-end fw-bold">
                             <i class="fa-solid fa-cloud-arrow-up me-1"></i>
                             Save
                         </button>
@@ -40,10 +40,16 @@
         <div class="col-12 col-md-6">
             <div class="card border-0 shadow-lg mt-4 mt-md-0">
                 <div class="card-body py-4 px-md-5 px-4">
-                    <h5 class="fw-500">
-                        <i class="fa-brands fa-product-hunt me-1"></i>
-                        PRODUCTS
-                    </h5>
+                    <div class="d-flex justify-content-between">
+                        <h5 class="fw-500">
+                            <i class="fa-brands fa-product-hunt me-1"></i>
+                            PRODUCTS
+                        </h5>
+                        <button class="btn btn-primary fw-bold" id="refreshBtn">
+                            <i class="fa-solid fa-arrows-rotate me-1"></i>
+                            Refresh List
+                        </button>
+                    </div>
                     <div class="clearfix"></div>
                     <hr />
 
