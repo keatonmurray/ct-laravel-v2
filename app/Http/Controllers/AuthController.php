@@ -68,4 +68,10 @@ class AuthController extends Controller
             ], 401);
         }
     }
+
+    public function logout()
+    {
+        session()->forget('logged_in_user');
+        return redirect()->route('auth.login');
+    }
 }
