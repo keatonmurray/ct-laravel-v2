@@ -17,4 +17,5 @@ Route::get('/register', [AuthController::class, 'registerView'])->name('auth.reg
 Route::post('/registerUser', [AuthController::class, 'registerUser'])->name('auth.registerUser');
 Route::post('/loginUser', [AuthController::class, 'loginUser'])->name('auth.loginUser');
 Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
+Route::put('/update', [ProductController::class, 'update'])->name('updateResource');
 Route::delete('/destroy', [ProductController::class, 'destroy'])->name('delete');

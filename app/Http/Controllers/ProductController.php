@@ -64,9 +64,34 @@ class ProductController extends Controller
         return response()->json(['html' => $html]);
     }
 
-    public function edit()
+    public function update(Request $request)
     {
+        $id = $request->input('id');
 
+        $validated = $request->validate([
+            'product_name'   => 'required|string|max:255',
+            'qty_in_stock'   => 'required|integer|min:0',
+            'price_per_item' => ['required', 'numeric', 'regex:/^\d+(\.\d{1,2})?$/'],
+        ]);
+
+        $products = session()->get('products', []);
+
+        foreach ($products as $index => $product) {
+            if ((string) $product['id'] === $id) {
+                $products[$index]['product_name']   = $validated['product_name'];
+                $products[$index]['qty_in_stock']   = $validated['qty_in_stock'];
+                $products[$index]['price_per_item'] = $validated['price_per_item'];
+                break;
+            }
+        }
+
+        session(['products' => $products]);
+
+        return response()->json([
+            'status'  => 'success',
+            'message' => 'Product updated successfully!',
+            'data'    => $validated
+        ]);
     }
 
     public function destroy(Request $request)

@@ -79,6 +79,8 @@
                 </div>
             </div>
         </div>
+
+        @include('modals.edit')
     </div>        
 </div>
 @endsection
