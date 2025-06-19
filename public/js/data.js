@@ -39,7 +39,7 @@ $(document).ready(function () {
                 toastr.options = {
                     "positionClass": "toast-top-center"
                 };
-                toastr.error('here was an error saving the data.');
+                toastr.error('Please fill out all fields.');
             }
         });
     });

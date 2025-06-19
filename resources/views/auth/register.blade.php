@@ -34,6 +34,9 @@
                     <button type="submit" class="btn btn-secondary w-100 fw-bold">
                         <i class="fa-solid fa-sign-in-alt me-2"></i> Register
                     </button>
+                    <div class="mt-3 d-flex align-items-center justify-content-center">
+                        <a class="text-dark fw-bold text-center" href="{{route('auth.loginView')}}">Already have an account? Login instead</a>
+                    </div>
                 </form>
             </div>
         </div>

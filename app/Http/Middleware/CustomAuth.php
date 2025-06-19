@@ -21,7 +21,7 @@ class CustomAuth
                 return response()->json(['message' => 'Unauthorized. Please log in.'], 401);
             }
 
-            return redirect()->route('auth.login');
+            return redirect()->route('auth.loginView');
         }
 
         return $next($request);

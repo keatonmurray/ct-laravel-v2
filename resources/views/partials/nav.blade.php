@@ -10,7 +10,7 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto gap-3">
-                <li class="nav-item fw-600"><a href="/" class="nav-link text-dark active">Home</a></li>
+                <li class="nav-item fw-600"><a href="/" class="nav-link text-dark">Home</a></li>
                 <li class="nav-item fw-600"><a href="/your-inventory" class="nav-link text-dark">Your Inventory</a></li>
             </ul>
 
@@ -24,7 +24,7 @@
                         </button>
                     </form>
                 @else
-                    <a href="/login" class="btn btn-secondary fw-bold" role="button">
+                    <a href="{{route('auth.loginView')}}" class="btn btn-secondary fw-bold" role="button">
                         <i class="fa-solid fa-right-to-bracket me-1"></i>
                         Login
                     </a>

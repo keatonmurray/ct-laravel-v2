@@ -25,7 +25,7 @@
                         </div>
                         <div class="mb-4">
                             <label for="price_per_item" class="form-label">Price Per Item</label>
-                            <input type="number" name="price_per_item" class="form-control text-muted small" id="price_per_item">
+                            <input type="number" name="price_per_item" class="form-control text-muted small" id="price_per_item" step="0.01" min="0">
                         </div>
                         <button type="submit" class="btn btn-secondary float-end fw-bold">
                             <i class="fa-solid fa-cloud-arrow-up me-1"></i>
