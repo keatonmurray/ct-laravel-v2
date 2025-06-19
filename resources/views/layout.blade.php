@@ -40,5 +40,6 @@
             @yield('content')
        </div>
        <script src="{{ asset('js/data.js') }}"></script>
+       <script src="{{ asset('js/auth.js') }}"></script>
     </body>
 </html>

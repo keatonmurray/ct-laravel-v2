@@ -11,7 +11,7 @@
         <div class="col-12 col-md-6 d-flex align-items-md-start align-items-center justify-content-center p-4">
             <div class="w-100" style="max-width: 450px;">
                 <br>
-                <form id="registerForm" action="#" method="POST" class="w-100 mt-5">
+                <form id="registerForm" action="/registerUser" method="POST" class="w-100 mt-5">
                     @csrf
                     <h2 class="mb-4 fw-bold text-center">Create an account</h2>
 
