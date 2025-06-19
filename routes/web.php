@@ -15,3 +15,4 @@ Route::post('/save-product', [ProductController::class, 'store'])->name('store')
 Route::get('/login', [AuthController::class, 'loginView'])->name('auth.login');
 Route::get('/register', [AuthController::class, 'registerView'])->name('auth.registerView');
 Route::post('/registerUser', [AuthController::class, 'registerUser'])->name('auth.registerUser');
+Route::post('/loginUser', [AuthController::class, 'loginUser'])->name('auth.loginUser');

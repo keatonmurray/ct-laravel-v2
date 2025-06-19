@@ -38,4 +38,34 @@ class AuthController extends Controller
             'data'    => $validated
         ]);
     }
+
+    public function loginUser(Request $request)
+    {
+        $validated = $request->validate([
+            'email_address' => 'required|email',
+            'password'      => 'required|string'
+        ]);
+
+        $users = session()->get('users', []);
+
+        $user = collect($users)->firstWhere(function ($user) use ($validated) {
+            return $user['email_address'] === $validated['email_address']
+                && $user['password'] === $validated['password'];
+        });
+
+        if ($user) {
+            session(['logged_in_user' => $user]);
+
+            return response()->json([
+                'status'  => 'success',
+                'message' => 'Logged in successfully!',
+                'data'    => $user
+            ]);
+        } else {
+            return response()->json([
+                'status'  => 'error',
+                'message' => 'Invalid email or password.',
+            ], 401);
+        }
+    }
 }
