@@ -1,61 +1,67 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# PHP Skills Test – Laravel CRUD Inventory
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This is my submission for the **Laravel Developer Skills Test**. The project demonstrates my working knowledge of Laravel, PHP, Bootstrap, and JavaScript (Ajax) by implementing a product inventory management system as outlined in the task description.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✅ Features Implemented
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 📋 Core Requirements (as per instructions)
+- A responsive form to input:
+  - **Product Name**
+  - **Quantity in Stock**
+  - **Price per Item**
+- Data is saved in a **JSON file (via PHP session)** — no external database.
+- The data is displayed below the form in rows, including:
+  - Product Name
+  - Quantity
+  - Price per Item
+  - Date Submitted (formatted)
+  - Total Value (Quantity × Price)
+- The last row displays the **sum total** of all product values.
+- All form submissions and updates are handled via **AJAX**.
+- UI styled using **Bootstrap 5**.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+### ✨ Extra Features I Added
+- 🔐 **User Authentication**
+  - Custom login and register views
+  - Protected routes with middleware
+- 🛠 **Full CRUD Functionality**
+  - Add, Edit, and Delete products dynamically
+  - All changes update the session instantly via Ajax
+- 📱 **Responsive UI**
+  - Mobile-first design with clean and intuitive layout
+- 🎨 **Landing Page**
+  - Basic homepage to make the project feel complete
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🚀 How to Run This
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+No setup required — just extract the zip and run the project on a local PHP/Laravel-ready server.
 
-## Laravel Sponsors
+## 💡 Developer's Note
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+I'm not yet an experienced Laravel developer in a production environment, but I hope the extra functionalities I added demonstrate how I make up for those gaps:
 
-### Premium Partners
+- I aim for clean and intuitive UI/UX
+- I strive to fully implement features end-to-end
+- I proactively go beyond requirements to add polish
+- I’m open to feedback and eager to grow
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+This project is my way of showing how I approach problems, learn by doing, and adapt quickly to unfamiliar tools or environments.
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🚀 How to Run This
 
-## Code of Conduct
+No setup required — just extract the zip and run the project on a local PHP/Laravel-ready server.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 📧 Contact
 
-## Security Vulnerabilities
+Let me know if you want to tailor this for GitHub, Bitbucket, or plain text/email submission.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+php artisan serve
