@@ -15,14 +15,14 @@
             </ul>
 
             <div class="actions d-flex gap-2">
-                <button class="btn btn-secondary fw-bold">
+                <a href="/login" class="btn btn-secondary fw-bold" role="button">
                     <i class="fa-solid fa-right-to-bracket me-1"></i>
                     Login
-                </button>
-                <button class="btn btn-secondary fw-bold">
+                </a>
+                <a href="/register" class="btn btn-secondary fw-bold" role="button">
                    <i class="fa-solid fa-user-plus me-1"></i>
                     Signup
-                </button>
+                </a>
             </div>
         </div>
     </div>
