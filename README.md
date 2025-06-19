@@ -65,3 +65,4 @@ Let me know if you want to tailor this for GitHub, Bitbucket, or plain text/emai
 
 ```bash
 php artisan serve
+npm run dev
