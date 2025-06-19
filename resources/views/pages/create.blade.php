@@ -57,6 +57,7 @@
                                         <th class="fw-500 text-nowrap">Price Per Item</th>
                                         <th class="fw-500 text-nowrap">Submitted On</th>
                                         <th class="fw-500 text-nowrap">Item Total</th>
+                                        <th class="fw-500 text-nowrap">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
